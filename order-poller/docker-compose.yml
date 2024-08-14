@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: order-db
+    environment:
+      - POSTGRES_DB=order
+      - POSTGRES_PASSWORD=pass123
+      - POSTGRES_USER=abbasova
+    ports:
+      - "5435:5432"
+    restart: always
